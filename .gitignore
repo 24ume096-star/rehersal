@@ -1,32 +1,29 @@
-# Dependencies
+# Dependencies (can be reinstalled with npm install)
 node_modules/
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Build outputs
+# Build outputs only
 dist/
 build/
 *.tsbuildinfo
 .next/
 out/
 
-# IDE
-.vscode/
+# IDE personal settings
+.vscode/settings.json
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
 
-# Logs
+# System
+.DS_Store
+.turbo/
+
+# Logs only
 logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -36,32 +33,19 @@ pids/
 *.pid
 *.seed
 
-# Database
-*.db
-*.sqlite
-postgresql_data/
-postgres_data/
-
 # Testing
-coverage/
 .nyc_output/
 
 # Temporary files
 tmp/
 temp/
 
-# Python
+# Python cache
 __pycache__/
-*.py[cod]
+*.pyc
 *$py.class
 *.so
 .Python
-env/
 venv/
 ENV/
 
-# Docker
-docker-compose.override.yml
-
-# Misc
-.turbo/
