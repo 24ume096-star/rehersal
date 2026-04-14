@@ -16,6 +16,7 @@ const TITLES: Record<NavId, { title: string; desc: string }> = {
   analytics:    { title: "Analytics & Reports",   desc: "Exports & executive summaries" },
   flood:        { title: "Flood Monitoring",      desc: "ML flood risk heatmaps & drainage" },
   helpdesk:     { title: "AI Help Desk",          desc: "Ask anything about any park using live data" },
+  "budget-optimizer": { title: "Budget Optimizer", desc: "Resource allocation and cost analysis" },
   settings:     { title: "Settings",              desc: "Tenants, API keys, and roles" },
 };
 
