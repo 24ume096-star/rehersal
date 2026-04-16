@@ -276,7 +276,7 @@ export function OverviewGrid({ city }: { city: string }) {
              const detail = await detailRes.json();
              targetName = detail?.data?.name || targetId;
              alertsCount = String(detail?.data?.activeAlertCount || 0);
-             const gRes = await fetch(`${API_BASE}/api/v1/gshi/parks/${targetId}/latest`);
+             const gRes = await fetch(`${API_BASE}/api/v1/gshi/parks/${targetId}/current`);
              if (gRes.ok) {
                 const gData = await gRes.json();
                 avg = Number(gData?.data?.overallScore || 0);

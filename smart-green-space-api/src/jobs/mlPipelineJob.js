@@ -9,7 +9,7 @@ function registerMlPipelineJob() {
       logger.info("ml_pipeline_start", { jobId: job.id, parkId: job.data.parkId });
       
       const parkId = job.data.parkId || "default_park";
-      const pythonExe = path.join(__dirname, "..", "ml", "venv", "Scripts", "python.exe");
+      const pythonExe = "python3";
       const scriptPath = path.join(__dirname, "..", "ml", "pipeline.py");
       
       exec(`"${pythonExe}" "${scriptPath}" "${parkId}"`, (error, stdout, stderr) => {
@@ -27,8 +27,8 @@ function registerMlPipelineJob() {
     "run-ml-pipeline",
     { parkId: "test_park" },
     {
-      jobId: "repeat-ml-pipeline-daily",
-      repeat: { cron: "0 0 * * *" },
+      jobId: "repeat-ml-pipeline-5min",
+      repeat: { cron: "*/5 * * * *" },
       removeOnComplete: true,
     },
   );
